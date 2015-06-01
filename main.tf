@@ -4,3 +4,8 @@ module "hoge" {
   secret_key = "${var.secret_key}"
   vpc_id     = "${var.vpc_id}"
 }
+
+resource "aws_iam_group" "developers" {
+  name = "developers"
+  path = "/users/"
+}
